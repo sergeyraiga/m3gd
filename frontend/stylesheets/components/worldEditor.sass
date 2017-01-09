@@ -1,0 +1,76 @@
+@import '../config/colors'
+
+.add-chapter-btn, .add-level-btn
+  color: $grey
+  font-size: 16px
+  border-color: #9d9d9d
+
+.add-chapter-btn:hover, .add-level-btn:hover
+  color: $black
+  border-color: $black
+  background: transparent
+
+.chapters-container, .chapter-levels-container
+  padding: 30px
+  border: 2px dashed #ccc
+  border-radius: 5px
+  margin-bottom: 30px
+
+.chapter-levels-container
+  padding-top: 10px
+  padding-bottom: 15px
+  cursor: pointer
+  position: relative
+  display: inline-block
+  width: 100%
+
+.world-editor
+  position: absolute
+  overflow-y: auto
+  width: 100%
+  height: 100%
+  padding: 0
+  margin: 0
+  padding-top: 20px
+  padding-bottom: 100px
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  align-items: flex-start
+  justify-content: center
+  font-size: 2.5vh
+  color: #aaa
+
+.save-world-btn
+  color: $green
+  font-size: 16px
+  border-color: $green
+
+.save-world-btn:hover
+  color: $green
+  border-color: $green
+  background: transparent
+
+.save-world-btn-container
+  display: flex
+  flex: 1
+  justify-content: flex-end
+
+.chapter-levels-header
+  font-size: 22px
+  margin-bottom: 10px
+
+.delete-chapter-level-btn
+  position: absolute
+  display: block
+  right: 7px
+  top: -2px
+  color: $red
+
+.delete-glyph
+  border: 2px solid
+  border-color: $red
+  border-radius: 50%
+  font-size: 12px
+  padding: 5px

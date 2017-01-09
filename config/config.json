@@ -1,0 +1,9 @@
+{
+  "local": {
+    "username": "postgres",
+    "password": "",
+    "database": "m3gd",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "map": [
+    {
+      "type": "km_db",
+      "targetAlias": "reach_target_cell",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "reach_target_cell",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "reach_target_cell",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+
+    {
+      "type": "km_db",
+      "targetAlias": "score",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "score",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "score",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+
+    {
+      "type": "km_db",
+      "targetAlias": "discover",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "discover",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "discover",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+
+    {
+      "type": "km_db",
+      "targetAlias": "collect_item",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "collect_item",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnCollectItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "collect_item",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsCollectKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+
+    {
+      "type": "km_db",
+      "targetAlias": "collect_locked_item",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "collect_locked_item",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "collect_locked_item",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+    {
+      "type": "km_db",
+      "targetAlias": "remove_special_viral_blocker",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "remove_special_viral_blocker",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "remove_special_viral_blocker",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+    {
+      "type": "km_db",
+      "targetAlias": "remove_viral_blocker",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "remove_viral_blocker",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "remove_viral_blocker",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+    {
+      "type": "km_db",
+      "targetAlias": "remove_double_viral_blocker",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "remove_double_viral_blocker",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "remove_double_viral_blocker",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    },
+
+    {
+      "type": "km_db",
+      "targetAlias": "capture_cells",
+      "actions": [
+        "UselessSuggestionKarmaAction",
+        "DebuffChangeSpawnItemsKarmaAction",
+        "DebuffRowSpawnItemsKarmaAction",
+        "DebuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_lb",
+      "targetAlias": "capture_cells",
+      "actions": [
+        "UsefulSuggestionKarmaAction",
+        "LightBuffChangeSpawnItemsKarmaAction",
+        "BuffMatchColorBombKarmaAction"
+      ]
+    },
+    {
+      "type": "km_hb",
+      "targetAlias": "capture_cells",
+      "actions": [
+        "HighBuffSuperItemsSpawnKarmaAction",
+        "HighBuffChangeSpawnItemsKarmaAction",
+        "HighBuffActivationSuperItemsKarmaAction"
+      ]
+    }
+  ]
+}

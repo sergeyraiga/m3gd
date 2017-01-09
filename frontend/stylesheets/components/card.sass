@@ -1,0 +1,116 @@
+@import '../config/colors'
+
+.card
+  border: 1px solid $bit-more-dark-grey
+  border-bottom: 0
+  position: relative
+  padding-left: 5px
+  border-left: 1px solid transparent
+  border-right: 1px solid transparent
+
+.card:first-child
+  border-top: 0
+
+.card:last-child
+  border-bottom: 1px solid $bit-more-dark-grey
+
+.card:hover
+  border-left-width: 5px
+  border-left-color: $bit-more-dark-grey
+  padding-left: 1px
+
+.card.active
+  border-left-width: 5px
+  border-left-color: $green
+  padding-left: 1px
+
+.media-card
+  padding: 10px 15px
+  padding-right: 5px
+
+.card-name
+  font-size: 14px
+  font-weight: bold
+  display: table-cell
+  color: $black
+  padding-right: 5px
+
+.card-info
+  font-size: 12px
+  color: $grey
+
+.action-panel
+  padding-top: 10px
+  font-size: 14px
+
+.level-config-action
+  padding-left: 2px
+  padding-right: 3px
+  display: table-cell
+  color: $grey
+  float: left
+  cursor: pointer
+
+.page-tools
+  border: 1px solid $bit-more-dark-grey
+  border-top-left-radius: 3px
+  border-top-right-radius: 3px
+  border-bottom: 0
+  padding-left: 0
+  margin-top: 15px
+  margin-bottom: 0
+  background-color: $light-grey
+
+.level-configs-count
+  padding: 7px
+  padding-left: 15px
+  padding-right: 0
+  font-size: 14px
+  display: table-cell
+  font-weight: bold
+  color: $black
+  cursor: pointer
+  float: left
+
+.level-configs-count:hover
+  color: $more-black
+
+.level-configs-panel-icon, .level-configs-panel-value
+  display: table-cell
+  vertical-align: middle
+
+.level-configs-panel-value
+  padding-left: 2px
+
+.level-configs-panel-action
+  color: $black
+  display: table-cell
+  vertical-align: middle
+  font-size: 14px
+  cursor: pointer
+
+.level-configs-panel-icon, .level-configs-panel-value
+  font-size: 14px
+  padding-right: 3px
+  vertical-align: middle
+
+.defined-filters
+  color: $black
+  background-color: $very-light-grey
+  border-right: 0
+
+.cards-list
+  position: absolute
+  top: 150px
+  right: 15px
+  bottom: 65px
+  left: 15px
+  flex-direction: column
+  border: 1px solid $bit-more-dark-grey
+  overflow: auto
+
+.action-corner
+  display: none
+
+.card:hover .action-corner
+  display: table-row
