@@ -58,6 +58,13 @@ class Card extends Component {
             <div style={{ display: 'table' }}>
               <div className="action-corner">
                 <ActionBtn
+                  data={data} desc='Скопировать папку'
+                  style={{ fontSize: '13px' }} icon='file'
+                  action={(dispatch, folder) => {
+                    dispatch(copyFolder(folder));
+                  }}
+                />
+                <ActionBtn
                   data={data} desc='Редактировать папку' icon='pencil'
                   style={{ fontSize: '13px' }}
                   action={(dispatch, folder) => dispatch(viewFolder(folder))}

@@ -15,6 +15,32 @@ function getFolders(req, res) {
     .then(folders => res.send(JSON.stringify(folders)));
 }
 
+function copyFolderLevels(req, res, new_folder_id) {
+  const query = '\
+    INSERT INTO \
+     levels (level.author, level.name, level."createdAt", level."updatedAt", level.level) \
+        SELECT level.author, level.name, level."createdAt", level."updatedAt", level.level \ 
+        FROM level, level_folders WHERE level_folders."folderId" = ${req.body.id};';
+  db.sequelize.query(query).spread(function(results, metadata) {
+    results.forEach(function(item) {
+        const levId = item.id;
+        const foldId = new_folder_id;
+        db.level_folders.build({ levId, foldId }).save();
+    });
+  });
+}
+
+function copyFolder(req, res) {
+  var fid;
+  const id = req.body.id;
+  db.folders.build({ author: username, req.body.name, req.body.desc }).save().then(function(fld){ fid = fld.id }).then(() => getFolders(req, res));
+  if (req.body.levels_count > 0)
+  {
+      copyFolderLevels(req, res, fid);
+  }
+  
+}
+
 function putFolder(req, res) {
   const user = auth(req);
   const username = user ? user.name : 'test';
