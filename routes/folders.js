@@ -65,5 +65,6 @@ module.exports = {
   get: getFolders,
   put: putFolder,
   post: postFolder,
+  copy: copyFolder,
   delete: deleteFolder
 };
