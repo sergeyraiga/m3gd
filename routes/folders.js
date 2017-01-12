@@ -18,9 +18,9 @@ function getFolders(req, res) {
 function copyFolderLevels(req, res, new_folder_id) {
   const query = '\
     INSERT INTO \
-     levels (level.author, level.name, level."createdAt", level."updatedAt", level.level) \
-        SELECT level.author, level.name, level."createdAt", level."updatedAt", level.level \ 
-        FROM level, level_folders WHERE level_folders."folderId" = ${req.body.id};';
+     levels (levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level) \
+        SELECT levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level \ 
+        FROM levels, level_folders WHERE level_folders."folderId" = ${req.body.id};';
   db.sequelize.query(query).spread(function(results, metadata) {
     results.forEach(function(item) {
         const levId = item.id;
