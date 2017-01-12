@@ -21,7 +21,7 @@ function copyFolderLevels(req, res, new_folder_id) {
      levels (levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level) \
         SELECT levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level \ 
         FROM levels, level_folders WHERE level_folders."folderId" = ${req.body.id} \
-        GROUP BY levels."createdAt";';
+        GROUP BY levels.name;';
   db.sequelize.query(query).spread(function(results, metadata) {
     results.forEach(function(item) {
         const levId = item.id;
