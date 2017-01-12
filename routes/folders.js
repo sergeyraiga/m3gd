@@ -32,12 +32,14 @@ function copyFolderLevels(req, res, new_folder_id) {
 }
 
 function copyFolder(req, res) {
-  var fid;
-  db.folders.build({ author: username, req.body.name, req.body.desc }).save().success(function(fld){ fid = fld.values.id }).then(() => getFolders(req, res));
-  if (req.body.levels_count > 0)
-  {
-      copyFolderLevels(req, res, fid);
-  }
+  db.folders.build({ author: username, req.body.name, req.body.desc }).save()
+    .success(function(fld){ 
+      if (req.body.levels_count > 0)
+      {
+        copyFolderLevels(req, res, fld.values.id);
+      } 
+    })
+    .then(() => getFolders(req, res));
 }
 
 function putFolder(req, res) {
