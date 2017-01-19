@@ -10,6 +10,7 @@ export const RECEIVE_FOLDERS = api.RECEIVE_FOLDERS;
 export const REQUEST_FOLDERS = api.REQUEST_FOLDERS;
 
 export const CREATE_FOLDER = 'CREATE_FOLDER';
+export const COPY_FOLDER = 'COPY_FOLDER';
 export const OPEN_FOLDER = 'OPEN_FOLDER';
 export const SELECT_FOLDER = 'SELECT_FOLDER';
 export const CLOSE_FOLDER = 'CLOSE_FOLDER';
@@ -36,6 +37,11 @@ export const selectFolder = folder => ({ type: SELECT_FOLDER, folder });
 export const createFolder = data => dispatch => {
   dispatch({ type: CREATE_FOLDER, data });
   dispatch(api.createFolder(data));
+};
+
+export const copyFolder = data => dispatch => {
+  dispatch({ type: COPY_FOLDER, data });
+  dispatch(api.copyFolder(data));
 };
 
 export const getFolders = () => api.getFolders();

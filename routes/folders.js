@@ -16,35 +16,29 @@ function getFolders(req, res) {
 }
 
 function copyFolderLevels(req, res, new_folder_id) {
-  const query = '\
-    INSERT INTO \
-     levels (levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level) \
-        SELECT levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level \ 
-        FROM levels, level_folders WHERE level_folders."folderId" = ${req.body.id} \
-        GROUP BY levels.name;';
-  db.sequelize.query(query).spread(function(results, metadata) {
-    results.forEach(function(item) {
-        const levId = item.id;
-        const foldId = new_folder_id;
-        db.level_folders.build({ levId, foldId }).save();
-    });
-  });
+          const query = 'INSERT INTO levels (levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level) SELECT levels.author, levels.name, levels."createdAt", levels."updatedAt", levels.level FROM levels, level_folders WHERE level_folders."folderId" = ${req.body.id};';
+          db.sequelize.query(query).spread(function(results, metadata) {
+              results.forEach(function(item) {
+              const levId = item.id;
+              const foldId = new_folder_id;
+              db.level_folders.build({ levId, foldId }).save();
+              });
+          });
 }
 
 function copyFolder(req, res) {
-  db.folders.build({ author: username, req.body.name, req.body.desc }).save()
-    .success(function(fld){ 
-      if (req.body.levels_count > 0)
-      {
-        copyFolderLevels(req, res, fld.values.id);
-      } 
-    })
-    .then(() => getFolders(req, res));
+  const user = auth(req);
+  const username = user ? user.name : 'test';
+  const name = req.body.name;
+  const desc = req.body.description;
+  const q = req.body.levels_count;
+  db.folders.build({ author: username, name, desc }).save()
+  .then(fld => copyFolderLevels(req, res, fld.id))
+  .then(() => getFolders(req, res));
 }
 
 function putFolder(req, res) {
-  const user = auth(req);
-  const username = user ? user.name : 'test';
+  const user = req.body.author;
   const name = req.body.name;
   const desc = req.body.description;
   db.folders.build({ author: username, name, desc }).save()
@@ -67,5 +61,6 @@ module.exports = {
   put: putFolder,
   post: postFolder,
   copy: copyFolder,
+  folderlevels: copyFolderLevels,
   delete: deleteFolder
 };

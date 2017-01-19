@@ -18,4 +18,6 @@ export const deleteFolder = data => backendFolders('delete', data);
 
 export const createFolder = data => backendFolders('put', data);
 
+export const copyFolder = data => backend('/copy_folders', 'put', data);
+
 export const editFolder = data => backendFolders('post', data);

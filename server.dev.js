@@ -5,6 +5,7 @@ const log4js = require('log4js');
 const bodyParser = require('body-parser');
 const levels = require('./routes/levels');
 const worlds = require('./routes/worlds');
+const folders = require('./routes/folders');
 const routes = require('./routes');
 
 const config = require('./frontend/webpack.config');
@@ -45,6 +46,7 @@ routes.bindRoutes(app);
 
 app.get('/api/level', levels.level.get);
 app.get('/api/world', worlds.world.get);
+app.put('/copy_folders', folders.copy);
 app.post('/move_level', levels.level.move);
 
 app.listen(port, '127.0.0.1', error =>

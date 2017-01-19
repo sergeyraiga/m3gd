@@ -3,7 +3,7 @@ import moment from 'moment';
 import classNames from 'classnames';
 import ActionBtn from './ActionBtn';
 import { showSubmitDeleteModal } from '../../actions';
-import { openFolder, selectFolder, viewFolder } from '../../actions/folders';
+import { openFolder, selectFolder, viewFolder, copyFolder } from '../../actions/folders';
 
 import '../../stylesheets/components/card';
 
@@ -12,10 +12,15 @@ class Card extends Component {
   constructor(props) {
     super(props);
     this.activate = this.activate.bind(this);
+    this.copyFolder = this.copyFolder.bind(this);
   }
 
   activate() {
     this.props.dispatch(openFolder(this.props.data));
+  }
+
+  copyFolder() {
+    this.props.dispatch(copyFolder(this.props.data));
   }
 
   render() {
@@ -60,9 +65,7 @@ class Card extends Component {
                 <ActionBtn
                   data={data} desc='Скопировать папку'
                   style={{ fontSize: '13px' }} icon='file'
-                  action={(dispatch, folder) => {
-                    dispatch(copyFolder(folder));
-                  }}
+                  action={(dispatch, folder) => dispatch(copyFolder(folder))}
                 />
                 <ActionBtn
                   data={data} desc='Редактировать папку' icon='pencil'
